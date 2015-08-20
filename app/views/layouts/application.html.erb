@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html>
+    <title>
+			Biotel
+		</title>
 <head>
   <title>Biotel</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
@@ -9,13 +12,16 @@
 <body>
     <div class="nav">
 			<ul>
-  				<li><a href="#home">Home</a></li>
-  				<li><a href="#news">Products</a></li>
-  				<li><a href="#contact">Contact</a></li>
-  				<li><a href="#about">Careers</a></li>
+          <%=link_to(image_tag("Biotel_logo.png", :alt => "Biotel Logo",:width => 20, :height => 20),controller: "welcome", action: "home") =%>
+  				<li><%= link_to "Home", controller: "welcome", action: "home" =%></li>
+  				<li><%= link_to "Products", controller: "welcome", action: "product" =%></li>
+  				<li><%= link_to "Contact", controller: "welcome", action: "contact" =%></li>
+  				<li><%= link_to "Careers", controller: "welcome", action: "career" =%></li>
 			</ul>
 		</div>
     <%= yield %>
-
+    <div class ="footer">
+       &nbsp; &#169; Biotel Industries Pvt. Ltd.
+    </div>
 </body>
 </html>
