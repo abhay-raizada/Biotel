@@ -11,13 +11,17 @@
 </head>
 <body>
     <div class="nav">
-			<ul>
-          <%=link_to(image_tag("Biotel_logo.png", :alt => "Biotel Logo",:width => 20, :height => 20),controller: "welcome", action: "home") =%>
-  				<li><%= link_to "Home", controller: "welcome", action: "home" =%></li>
-  				<li><%= link_to "Products", controller: "welcome", action: "product" =%></li>
-  				<li><%= link_to "Contact", controller: "welcome", action: "contact" =%></li>
-  				<li><%= link_to "Careers", controller: "welcome", action: "career" =%></li>
-			</ul>
+      <div id="logo">
+          <%=link_to(image_tag("Biotel_logo.png", :alt => "Biotel Logo",:width => 35, :height => 35),controller: "welcome", action: "home") =%>
+      </div>
+      <div id="menu">
+			   <ul>         
+  				  <li><%= link_to "Home", controller: "welcome", action: "home" =%></li>
+  				  <li><%= link_to "Products", controller: "welcome", action: "product" =%></li>
+  				  <li><%= link_to "Contact", controller: "welcome", action: "contact" =%></li>
+  				  <li><%= link_to "Careers", controller: "welcome", action: "career" =%></li>
+			   </ul>
+      </div>
 		</div>
     <%= yield %>
     <div class ="footer">
