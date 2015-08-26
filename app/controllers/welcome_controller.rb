@@ -9,5 +9,6 @@ class WelcomeController < ApplicationController
   end
   
   def product
+    @products = Product.all
   end
 end
